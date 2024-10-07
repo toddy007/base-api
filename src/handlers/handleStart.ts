@@ -8,6 +8,6 @@ export const handleStart = async (webserver: FastifyInstance) => {
     
     webserver.listen(
         { port }, 
-        () => console.log(`[RUN] Webserver running on port ${port}, access https://localhost:${port}`)
+        () => console.log(`[RUN] Webserver running on port ${port}, access http://localhost:${port}`)
     );
 }

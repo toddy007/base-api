@@ -1,11 +1,9 @@
-import Fastify from 'fastify';
+import { FastifyInstance } from 'fastify';
 import { handleLoadRoutes } from './handleLoadRoutes';
-
-export const webserver = Fastify();
 
 const port = 8080;
 
-export const handleStart = async () => {
+export const handleStart = async (webserver: FastifyInstance) => {
     await handleLoadRoutes(webserver);
     
     webserver.listen(

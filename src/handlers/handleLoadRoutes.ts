@@ -6,7 +6,7 @@ export const handleLoadRoutes = async (webserver: FastifyInstance) => {
 
     for (const routePath of routesPath) {
         const { default: route }: { default: RouteOptions } = await import('../../' + routePath);
-        console.log('[ROUTE] Route "' + (route.url ?? route.path) + '" loaded');
+        console.log('[ROUTE] Route "' + route.url + '" loaded');
 
         webserver.route(route);
     };

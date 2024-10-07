@@ -1,5 +1,6 @@
-import { handleStart, webserver } from './handlers/handleStart';
+import Fastify from 'fastify';
+import { handleStart } from './handlers/handleStart';
 
-export { webserver };
+export const webserver = Fastify();
 
-handleStart();
+handleStart(webserver);

@@ -2,7 +2,7 @@ import { RouteOptions } from 'fastify';
 
 export default {
     method: 'GET',
-    path: '/',
+    url: '/',
     handler: (request, reply) => {
         return reply.send('Hello World!');
     },

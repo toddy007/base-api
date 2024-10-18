@@ -1,7 +1,7 @@
 import { RouteOptions } from 'fastify';
 
 export default {
-    method: 'GET',
+    method: 'GET', // use array for multiple methods
     url: '/',
     handler: (request, reply) => {
         return reply.send('Hello World!');
